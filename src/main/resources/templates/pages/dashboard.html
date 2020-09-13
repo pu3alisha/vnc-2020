@@ -1,0 +1,84 @@
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layouts/defaultInternal"> 
+<div layout:fragment="content" style="display: contents;">
+	<div class="views">
+		<div class="view view-main">
+			<div class="pages">
+				<div data-page="dashboard" class="page">
+					<div class="page-content">
+						<div class="navbar navbar--fixed navbar--fixed-top navbar--bg">
+							<div class="navbar__col navbar__col--title">
+								<a href="index.html">CIMB HELLO!</a>
+							</div>
+							<div
+								class="navbar__col navbar__col--icon navbar__col--icon-right">
+								<a href="#" data-panel="right" class="open-panel"><img
+									src="images/icons/white/user.png" alt="" title=""/></a>
+							</div>
+						</div>
+
+						<div id="pages_maincontent">
+							<div class="img_centre">
+								<img src="/images/users/eza.jpg" alt="image"  class="img_user"/>
+							</div>
+							<div>&nbsp;</div>
+							<div class="page_single layout_fullwidth_padding">
+								<h3></h3>
+								<ul class="features_list">
+									<li><img
+											src="images/icons/black/user.png" alt="" title="" /><span>Norhafiza
+												M Razali<br>Officer<br>Digital Communication and
+												Channel <br> Sales Digitalization Performance and
+												Communication
+										</span></li>
+									<li><a href="tel:0194302912"><img
+											src="images/icons/black/mobile.png" alt="" title="" /><span>+6019
+												4302912</span></a></li>
+									<li><a href="https://wa.me/60194302912"><img
+											src="images/icons/black/message.png" alt="" title="" /><span>+6019
+												4302912</span></a></li>
+									<li><a href="tel:033625206"><img
+											src="images/icons/black/phone.png" alt="" title="" /><span>+03
+												3625206 </span></a></li>
+									<li><a href="mailto:webmaster@example.com"><img
+											src="images/icons/black/contact.png" alt="" title="" /><span>norhafiza.mrazali@cimb.com</span></a></li>
+									<li><a href="http://maps.google.com/?q=Menara CIMB, Jalan Stesen Sentral 2, Kuala Lumpur
+												Sentral, 50740 Kuala Lumpur"><img
+											src="images/icons/black/map.png" alt="" title="" /><span>Level
+												5, Menara CIMB, Jalan Stesen Sentral 2, Kuala Lumpur
+												Sentral, 50740 Kuala Lumpur</span></a></li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- Slider -->
+						<div class="swiper-container-toolbar swiper-toolbar">
+							<div class="swiper-pagination-toolbar"></div>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide toolbar-icon">
+									<a th:href="@{/dashboard}"><img src="images/icons/black/home.png"
+										alt="Home" title="Home" /></a> <a th:href="@{/shareCard}"><img
+										src="images/icons/black/share.png" alt="Share Card"
+										title="Share Card" /></a> <a th:href="@{/product}"><img
+										src="images/icons/black/shop.png" alt="List Product"
+										title="List Product" /></a> <a href="#" data-panel="right"
+										class="open-panel"><img src="images/icons/black/user.png"
+										alt="User" title="User" /></a> <!-- <a th:href="@{/scanner}"
+										style="pointer-events: none; cursor: default;"><img
+										src="images/icons/black/scan.png" alt="scanner"
+										title="Scanner" /></a> -->
+									<!-- <a th:href="@{/contact}" style="pointer-events: none;cursor: default;"><img
+										src="images/icons/black/contact.png" alt="Contact"
+										title="Contact" /></a> -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div th:replace="/fragments/htmlScript::script"></div>
+</div>
+</html>

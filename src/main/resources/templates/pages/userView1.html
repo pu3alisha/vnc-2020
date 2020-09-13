@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="fragments/htmlHeader"></head>
+<body id="mobile_wrap">
+	<div style="display: contents;">
+	<div class="views">
+		<div class="view view-main">
+			<div class="pages">
+				<div data-page="dashboard" class="page">
+					<div class="page-content">
+						<div class="navbar navbar--fixed navbar--fixed-top navbar--bg">
+							<div class="navbar__col navbar__col--title">
+								<a href="#">CIMB HELLO!</a>
+							</div>
+						</div>
+
+						<div id="pages_maincontent">
+							<div class="img_centre">
+								<img src="/images/users/eza.jpg" alt="image"  class="img_user"/>
+							</div>
+							<div>&nbsp;</div>
+							<div class="page_single layout_fullwidth_padding">
+								<h3></h3>
+								<ul class="features_list">
+									<li><img src="images/icons/black/user.png" alt="" title="" /><span>Norhafiza
+											M Razali<br>Officer<br>Digital Communication and
+											Channel <br> Sales Digitalization Performance and
+											Communication
+									</span></li>
+									<li><a href="tel:0194302912"><img
+											src="images/icons/black/mobile.png" alt="" title="" /><span>+6019
+												4302912</span></a></li>
+									<li><a href="https://wa.me/60194302912"><img
+											src="images/icons/black/message.png" alt="" title="" /><span>+6019
+												4302912</span></a></li>
+									<li><a href="tel:033625206"><img
+											src="images/icons/black/phone.png" alt="" title="" /><span>+03
+												3625206 </span></a></li>
+									<li><a href="mailto:webmaster@example.com"><img
+											src="images/icons/black/contact.png" alt="" title="" /><span>norhafiza.mrazali@cimb.com</span></a></li>
+									<li><a
+										href="http://maps.google.com/?q=Level
+												5, Menara CIMB, Jalan Stesen Sentral 2, Kuala Lumpur
+												Sentral, 50740 Kuala Lumpur"><img
+											src="images/icons/black/map.png" alt="" title="" /><span>Level
+												5, Menara CIMB, Jalan Stesen Sentral 2, Kuala Lumpur
+												Sentral, 50740 Kuala Lumpur</span></a></li>
+								</ul>
+							</div>
+							<div class="page_single layout_fullwidth_padding product">
+
+								<h4>
+									<b>Product</b>
+								</h4>
+								<div class="imgProduct">
+									<img src="/images/product/product2.jpg" >
+								</div>
+								<div>&nbsp;</div>
+								<ul class="responsive_table">
+									<li class="table_row">
+										<div class="table_section_small">Product Name</div>
+										<div class="table_section">Cash Plus Personal Loan</div>
+									</li>
+									<li class="table_row">
+										<div class="table_section_small">Product Details</div>
+										<div class="table_section">
+											<a type="button" class="smallButton" target="_blank"
+											href="https://www.cimb.com.my/en/personal/day-to-day-banking/financing/personal-financing/cash-plus-personal-loan.html">
+												CLICK HERE </a>
+										</div>
+									</li>
+								</ul>
+
+								<span style="color: red;"><p>*For verify the information is valid as CIMB staff you may click below button</p></span>
+								<input type="submit" name="submit" class="buttonSubmit"
+										id="submit" value="VERIFICATION">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div th:replace="/fragments/htmlScript::script"></div>
+</div>
+
+</body>
+</html>

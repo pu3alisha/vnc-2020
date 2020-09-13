@@ -1,0 +1,221 @@
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layouts/defaultInternal">
+<div layout:fragment="content" style="display: contents;">
+	<div class="views">
+		<div class="view view-main">
+			<div class="pages">
+				<div data-page="dashboard" class="page">
+					<div class="page-content">
+						<div class="navbar navbar--fixed navbar--fixed-top navbar--bg">
+							<div class="navbar__col navbar__col--title">
+								<a href="index.html">CIMB HELLO!</a>
+							</div>
+							<div
+								class="navbar__col navbar__col--icon navbar__col--icon-right">
+								<a href="#" data-panel="right" class="open-panel"><img
+									src="images/icons/white/user.png" alt="" title="" /></a>
+							</div>
+						</div>
+
+						<div id="pages_maincontent">
+							<h2 class="page_title">SHARE NAME CARD</h2>
+							<div class="page_single layout_fullwidth_padding">
+								<div>&nbsp;</div>
+								<div class="form_row">
+									<label><b>Product:</b></label>
+									<div class="selector_overlay">
+										<select name="product" class="required product" id="product" onchange="productSelect()">
+											<option value="0">Select options</option>
+											<option value="1">CIMB e Credit Card</option>
+											<option value="2">Cash Plus Personal Loan</option>
+											<option value="3">e-GOLD Investment Account (eGIA)</option>
+										</select>
+									</div>
+								</div>
+								<div class="form_row qrCodeShare1 hidden" >
+									<div class="divHeader">
+										<h5>
+											<b>QR CODE</b>
+										</h5>
+									</div>
+									<div class="qrCodeImg">
+										<img src="/images/qrcode/qrCodeProduct1.png" alt="qr_code" />
+									</div>
+
+									<input type="submit" name="submit" class="buttonSubmit"
+										id="submit" value="Copy QR CODE"> 
+									<input type="button" name="submit" class="buttonSubmit" id="submit"
+										value="Copy LINK" onclick="copyURL('userView')">
+									<ul class="team_socials">
+										<li>
+											<a href="https://twitter.com/intent/tweet?url=http%3A%2F%2F192.168.1.102%3A9082%2FuserView&text=Say%20Hello!%20to%20know%20the%20CIMB%20product." class="external">
+												<img src="/images/twitter.png" alt="" title="">
+											</a>
+										</li>
+										<li>
+											<a href="https://www.facebook.com/sharer.php?u=http%3A%2F%2F192.168.1.102%3A9082%2FuserView" class="external">
+												<img src="/images/facebook.png" alt="" title="">
+											</a>
+										</li>
+										<li>
+											<a href="https://api.whatsapp.com/send?text=http%3A%2F%2F192.168.1.102%3A9082%2FuserView" class="external">
+												<img src="/images/whatsapp.png" alt="" title="">
+											</a>
+										</li>
+									</ul>
+									<div>&nbsp;</div>
+
+								</div>
+								<div class="form_row qrCodeShare2 hidden">
+									<div class="divHeader">
+										<h5>
+											<b>QR CODE</b>
+										</h5>
+									</div>
+									<div class="qrCodeImg">
+										<img src="/images/qrcode/qrCodeProduct2.png" alt="qr_code" />
+									</div>
+
+									<input type="submit" name="submit" class="buttonSubmit"
+										id="submit" value="Copy QR CODE"> 
+									<input type="button" name="submit" class="buttonSubmit" id="submit"
+										value="Copy LINK" onclick="copyURL('userView')">
+									<ul class="team_socials">
+										<li>
+											<a href="https://twitter.com/intent/tweet?url=http%3A%2F%2F192.168.1.102%3A9082%2FuserView1&text=Say%20Hello!%20to%20know%20the%20CIMB%20product." class="external">
+												<img src="/images/twitter.png" alt="" title="">
+											</a>
+										</li>
+										<li>
+											<a href="https://www.facebook.com/sharer.php?u=http%3A%2F%2F192.168.1.102%3A9082%2FuserView1" class="external">
+												<img src="/images/facebook.png" alt="" title="">
+											</a>
+										</li>
+										<li>
+											<a href="https://api.whatsapp.com/send?text=http%3A%2F%2F192.168.1.102%3A9082%2FuserView1" class="external">
+												<img src="/images/whatsapp.png" alt="" title="">
+											</a>
+										</li>
+									</ul>
+									<div>&nbsp;</div>
+
+								</div>
+								<div class="form_row qrCodeShare3 hidden">
+									<div class="divHeader">
+										<h5>
+											<b>QR CODE</b>
+										</h5>
+									</div>
+									<div class="qrCodeImg">
+										<img src="/images/qrcode/qrCodeProduct3.png" alt="qr_code" />
+									</div>
+
+									<input type="submit" name="submit" class="buttonSubmit"
+										id="submit" value="Copy QR CODE"> 
+									<input type="button" name="submit" class="buttonSubmit" id="submit"
+										value="Copy LINK" onclick="copyURL('userView')">
+										
+									<ul class="team_socials">
+										<li>
+											<a href="https://twitter.com/intent/tweet?url=http%3A%2F%2F192.168.1.102%3A9082%2FuserView2&text=Say%20Hello!%20to%20know%20the%20CIMB%20product." class="external">
+												<img src="/images/twitter.png" alt="" title="">
+											</a>
+										</li>
+										<li>
+											<a href="https://www.facebook.com/sharer.php?u=http%3A%2F%2F192.168.1.102%3A9082%2FuserView2" class="external">
+												<img src="/images/facebook.png" alt="" title="">
+											</a>
+										</li>
+										<li>
+											<a href="https://api.whatsapp.com/send?text=http%3A%2F%2F192.168.1.102%3A9082%2FuserView2" class="external">
+												<img src="/images/whatsapp.png" alt="" title="">
+											</a>
+										</li>
+									</ul>
+									<div>&nbsp;</div>
+
+								</div>
+							</div>
+						</div>
+
+						<!-- Slider -->
+						<div class="swiper-container-toolbar swiper-toolbar">
+							<div class="swiper-pagination-toolbar"></div>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide toolbar-icon">
+									<a th:href="@{/dashboard}"><img
+										src="images/icons/black/home.png" alt="Home" title="Home" /></a>
+									<a th:href="@{/shareCard}"><img
+										src="images/icons/black/share.png" alt="Share Card"
+										title="Share Card" /></a> <a th:href="@{/product}"><img
+										src="images/icons/black/shop.png" alt="List Product"
+										title="List Product" /></a> <a href="#" data-panel="right"
+										class="open-panel"><img src="images/icons/black/user.png"
+										alt="User" title="User" /></a>
+									<!-- <a th:href="@{/scanner}"
+										style="pointer-events: none; cursor: default;"><img
+										src="images/icons/black/scan.png" alt="scanner"
+										title="Scanner" /></a> -->
+									<!-- <a th:href="@{/contact}" style="pointer-events: none;cursor: default;"><img
+										src="images/icons/black/contact.png" alt="Contact"
+										title="Contact" /></a> -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div th:replace="/fragments/htmlScript::script"></div>
+	<script>
+		$(document).ready(function() {
+			$(".qrCodeShare1").addClass('hidden');
+			$(".qrCodeShare2").addClass('hidden');
+			$(".qrCodeShare3").addClass('hidden');
+			
+			/* $('.product').change(function() {
+				$(this).find("option:selected").each(function(){
+					
+				});
+			}).change(); */
+		});
+		
+		function productSelect(){
+			var optionVal = document.getElementById("product").value;
+			console.log(optionVal);
+			if (optionVal == '1') {
+				$(".qrCodeShare1").removeClass('hidden');
+				$(".qrCodeShare2").addClass('hidden');
+				$(".qrCodeShare3").addClass('hidden');
+				location.load();
+			} else if (optionVal == '2') {
+				$(".qrCodeShare2").removeClass('hidden');
+				$(".qrCodeShare1").addClass('hidden');
+				$(".qrCodeShare3").addClass('hidden');
+			} else if (optionVal == '3') {
+				$(".qrCodeShare3").removeClass('hidden');
+				$(".qrCodeShare1").addClass('hidden');
+				$(".qrCodeShare2").addClass('hidden');
+			} else {
+				$(".qrCodeShare1").addClass('hidden');
+				$(".qrCodeShare2").addClass('hidden');
+				$(".qrCodeShare3").addClass('hidden');
+			}
+			
+		}
+		
+		function copyURL(value, json) {
+			var tempInput = document.createElement("input");
+			var networkInterfaces = json.ip;
+			tempInput.style = "position: absolute; left: -1000px; top: -1000px";
+			tempInput.value = 'http://192.168.1.102:9082/userView';
+			document.body.appendChild(tempInput);
+			tempInput.select();
+			document.execCommand("copy");
+			document.body.removeChild(tempInput);
+		}
+	</script>
+</div>
+</html>

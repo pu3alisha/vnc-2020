@@ -1,0 +1,162 @@
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layouts/defaultInternal">
+<div layout:fragment="content" style="display: contents;">
+	<div class="views">
+		<div class="view view-main">
+			<div class="pages">
+				<div data-page="dashboard" class="page">
+					<div class="page-content">
+						<div class="navbar navbar--fixed navbar--fixed-top navbar--bg">
+							<div class="navbar__col navbar__col--title">
+								<a href="index.html">CIMB HELLO!</a>
+							</div>
+							<div
+								class="navbar__col navbar__col--icon navbar__col--icon-right">
+								<a href="#" data-panel="right" class="open-panel"><img
+									src="images/icons/white/user.png" alt="" title="" /></a>
+							</div>
+						</div>
+
+						<div id="pages_maincontent">
+							<h2 class="page_title">LIST OF YOUR PRODUCT</h2>
+							<div class="page_single layout_fullwidth_padding">
+								<div>&nbsp;</div>
+								<div class="form_row">
+									<label><b>Product:</b></label>
+									<div class="selector_overlay">
+										<select name="selectoptions" class="required" id="product">
+											<option value="0" selected>Select options</option>
+											<option value="1">CIMB e Credit Card</option>
+											<option value="2">Cash Plus Personal Loan</option>
+											<option value="3">e-GOLD Investment Account (eGIA)</option>
+										</select>
+									</div>
+								</div>
+								<div class="listProduct1" style="display: none;">
+									<div>&nbsp;</div>
+									<div class="imgProduct">
+										<img src="/images/product/product1.jpg">
+									</div>
+									<div>&nbsp;</div>
+									<ul class="responsive_table">
+										<li class="table_row">
+											<div class="table_section_small">Product Name</div>
+											<div class="table_section">CIMB e Credit Card</div>
+										</li>
+
+										<li class="table_row">
+											<div class="table_section_small">Product Details</div>
+											<div class="table_section">
+												<a type="button" class="smallButton" target="_blank"
+													href="https://www.cimb.com.my/en/personal/promotions/latest-promotions/cimb-e-credit-card.html">
+													CLICK HERE </a>
+											</div>
+										</li>
+									</ul>
+
+								</div>
+								<div class="listProduct2" style="display: none;">
+									<div>&nbsp;</div>
+									<div class="imgProduct">
+										<img src="/images/product/product2.jpg">
+									</div>
+									<div>&nbsp;</div>
+									<ul class="responsive_table">
+										<li class="table_row">
+											<div class="table_section_small">Product Name</div>
+											<div class="table_section">Cash Plus Personal Loan</div>
+										</li>
+
+										<li class="table_row">
+											<div class="table_section_small">Product Details</div>
+											<div class="table_section">
+												<a type="button" class="smallButton" target="_blank"
+													href="https://www.cimb.com.my/en/personal/day-to-day-banking/financing/personal-financing/cash-plus-personal-loan.html">
+													CLICK HERE </a>
+											</div>
+										</li>
+									</ul>
+
+								</div>
+								<div class="listProduct3" style="display: none;">
+									<div>&nbsp;</div>
+									<div class="imgProduct">
+										<img src="/images/product/product3.jpg">
+									</div>
+									<div>&nbsp;</div>
+									<ul class="responsive_table">
+										<li class="table_row">
+											<div class="table_section_small">Product Name</div>
+											<div class="table_section">e-GOLD Investment Account (eGIA)</div>
+										</li>
+
+										<li class="table_row">
+											<div class="table_section_small">Product Details</div>
+											<div class="table_section">
+												<a type="button" class="smallButton" target="_blank"
+													href="https://www.cimb.com.my/en/personal/day-to-day-banking/investments/e-gold-investment-account-egia.html">
+													CLICK HERE </a>
+											</div>
+										</li>
+									</ul>
+
+								</div>
+							</div>
+						</div>
+
+						<!-- Slider -->
+						<div class="swiper-container-toolbar swiper-toolbar">
+							<div class="swiper-pagination-toolbar"></div>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide toolbar-icon">
+									<a th:href="@{/dashboard}"><img
+										src="images/icons/black/home.png" alt="Home" title="Home" /></a>
+									<a th:href="@{/shareCard}"><img
+										src="images/icons/black/share.png" alt="Share Card"
+										title="Share Card" /></a> <a th:href="@{/product}"><img
+										src="images/icons/black/shop.png" alt="List Product"
+										title="List Product" /></a> <a href="#" data-panel="right"
+										class="open-panel"><img src="images/icons/black/user.png"
+										alt="User" title="User" /></a>
+									<!-- <a th:href="@{/scanner}"
+										style="pointer-events: none; cursor: default;"><img
+										src="images/icons/black/scan.png" alt="scanner"
+										title="Scanner" /></a> -->
+									<!-- <a th:href="@{/contact}" style="pointer-events: none;cursor: default;"><img
+										src="images/icons/black/contact.png" alt="Contact"
+										title="Contact" /></a> -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div th:replace="/fragments/htmlScript::script"></div>
+	<script>
+		$(document).ready(function() {
+			$('#product').on('change', function() {
+				if (this.value == '1') {
+					$(".listProduct1").show();
+					$(".listProduct2").hide();
+					$(".listProduct3").hide();
+				} else if(this.value == '2'){
+					$(".listProduct2").show();
+					$(".listProduct1").hide();
+					$(".listProduct3").hide();
+				} else if(this.value == '3'){
+					$(".listProduct3").show();
+					$(".listProduct1").hide();
+					$(".listProduct2").hide();
+				}else{
+					$(".listProduct1").hide();
+					$(".listProduct2").hide();
+					$(".listProduct3").hide();
+				}
+			});
+		});
+	</script>
+</div>
+</html>
